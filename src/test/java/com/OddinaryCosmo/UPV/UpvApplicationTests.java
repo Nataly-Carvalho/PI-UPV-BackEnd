@@ -1,10 +1,10 @@
-package com.cosmocompany.SaoJoseDelivery;
+package com.OddinaryCosmo.UPV;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SaoJoseDeliveryApplicationTests {
+class UpvApplicationTests {
 
 	@Test
 	void contextLoads() {
