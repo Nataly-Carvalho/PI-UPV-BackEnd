@@ -45,7 +45,19 @@ public class UsuarioModel {
 		@JsonIgnoreProperties("usuario")
 		private List<ProdutosModel> produtos;
 		
+	
+		public UsuarioModel(Long id, String nome, String usuario,String senha,String foto,String tipo) {
+			this.id = id;
+			this.nome = nome;
+			this.usuario = usuario;
+			this.senha = senha;
+			this.foto = foto;
+			this.tipo = tipo;
+		}
 
+		public UsuarioModel() { }
+		
+		
 		public Long getId() {
 			return id;
 		}
