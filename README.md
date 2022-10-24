@@ -1,4 +1,12 @@
-# Projeto integrador UPV (Back-end)
+# Projeto integrador UPV (Back-end)  <img align="center" alt="Naty-Java" height="100" width="200" src="https://i.imgur.com/X1Wvbro.png" >
+  
+
+## Equipe
+- <a href="https://github.com/issasouza">Isabelly Souza </a>
+-  <a href="https://github.com/Nataly-Carvalho">Nataly Carvalho</a>
+-  Caio Daniel vitor
+-  Israel Melo 
+-  Sergio Bezera
 
 ## UPV
 
@@ -25,10 +33,12 @@ Com isso, podemos dizer que a UPV foi criada para todos os microempreendedores q
 
 ### Tecnologias usadas 
 
- <img align="center" alt="Naty-Java" height="30" width="30"src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" />
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
-          
+<div>
+ <img align="center" alt="Naty-Java" height="100" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+-
+<img align="center" alt="Naty-Java" height="100" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" />
+-
+<img align="center" alt="Naty-Java" height="100" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+ 
+ </div>
           
