@@ -9,8 +9,8 @@
 		<version>2.7.2</version>
 		<relativePath /> 
 	</parent>
-	<groupId>org.generation</groupId>
-	<artifactId>com.OddinaryCosmo</artifactId>
+	<groupId>com.OddinaryCosm</groupId>
+	<artifactId>UPV</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>UPV</name>
 	<description>com.OddinaryCosmo</description>
