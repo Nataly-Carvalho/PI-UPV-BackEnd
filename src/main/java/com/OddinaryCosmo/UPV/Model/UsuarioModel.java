@@ -26,8 +26,11 @@ public class UsuarioModel {
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
 		
-		@NotNull(message = "O atributo Nome é Obrigatorio")
+		@NotNull(message = "O atrib(0L, \"Root\",\"root\", \"root@root.com\", \"rootroot\", \" \", \"\", \"12345678900\",\"123456789\", \"asd\",\"12\",\"12\",\"12345678\"));uto Nome é Obrigatorio")
 		private String nome;
+		
+		@NotNull(message = "O atributo sobrenome é Obrigatorio")
+		private String sobrenome;
 		
 		@Schema(example = "email@email.com.br")
 		@NotNull(message = "O Atributo Usuário é Obrigatório")
@@ -43,18 +46,115 @@ public class UsuarioModel {
 		
 		private String tipo;
 		
-		@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
-		@JsonIgnoreProperties("usuario")
-		private List<ProdutosModel> produtos;
+		@Size(min = 11, max= 11, message = "O CPF tem que ter no minimo 9 digitos e no maximo 9" )
+		@NotBlank(message = "O atributo cpf é Obrigatorio")
+		private String cpf;
 		
-	
-		public UsuarioModel(Long id, String nome, String usuario,String senha,String foto,String tipo) {
+		@Size(min = 9,max = 9, message = "O número tem que ter no maximo 11 caracteres e e no minimo 11")
+		private String telefone;
+		
+		@NotBlank(message = "O atributo bairro é Obrigatorio")
+		private String bairro;
+		
+		@NotBlank(message = "O atributo rua é Obrigatorio")
+		private String rua;
+		
+		@NotBlank(message = "O atributo numero é Obrigatorio")
+		private String numero;
+		
+		@NotBlank(message = "O atributo cep é Obrigatorio")
+		@Size(min =8,max=8, message = "O atributo cep tem que ter no maximo e no minimo 8 caracteres")
+		private String cep;
+		
+		private String complemento;
+		
+
+		public UsuarioModel(Long id, String nome, String usuario,String senha,String foto,String tipo, String cep,String cpf, String rua,String telefone,
+				String numero, String complemento,String sobrenome ) {
 			this.id = id;
 			this.nome = nome;
 			this.usuario = usuario;
 			this.senha = senha;
 			this.foto = foto;
 			this.tipo = tipo;
+			this.cep = cep;
+			this.numero = numero;
+			this.telefone = telefone;
+			this.complemento = complemento;
+			this.rua = rua;
+			this.cpf = cpf;
+			this.sobrenome = sobrenome;
+			
+		}
+		
+		@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
+		@JsonIgnoreProperties("usuario")
+		private List<ProdutosModel> produtos;
+		
+		
+		
+		public String getSobrenome() {
+			return sobrenome;
+		}
+
+		public void setSobrenome(String sobrenome) {
+			this.sobrenome = sobrenome;
+		}
+
+		public String getCpf() {
+			return cpf;
+		}
+
+		public void setCpf(String cpf) {
+			this.cpf = cpf;
+		}
+
+		public String getTelefone() {
+			return telefone;
+		}
+
+		public void setTelefone(String telefone) {
+			this.telefone = telefone;
+		}
+
+		public String getBairro() {
+			return bairro;
+		}
+
+		public void setBairro(String bairro) {
+			this.bairro = bairro;
+		}
+
+		public String getRua() {
+			return rua;
+		}
+
+		public void setRua(String rua) {
+			this.rua = rua;
+		}
+
+		public String getNumero() {
+			return numero;
+		}
+
+		public void setNumero(String numero) {
+			this.numero = numero;
+		}
+
+		public String getCep() {
+			return cep;
+		}
+
+		public void setCep(String cep) {
+			this.cep = cep;
+		}
+
+		public String getComplemento() {
+			return complemento;
+		}
+
+		public void setComplemento(String complemento) {
+			this.complemento = complemento;
 		}
 
 		public UsuarioModel() { }
