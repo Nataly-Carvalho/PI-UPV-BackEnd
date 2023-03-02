@@ -65,9 +65,9 @@
                 </dependency>
 		<!-- Dependência Spring Doc - Swagger -->
 		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.6.11</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<!-- Dependência Spring Boot Test -->
 		<dependency>
