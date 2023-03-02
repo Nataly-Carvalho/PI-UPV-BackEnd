@@ -63,7 +63,6 @@
 			<artifactId>postgresql</artifactId>
                         <version>42.2.16</version>
                 </dependency>
-		</dependency> 
 		<!-- Dependência Spring Doc - Swagger -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
