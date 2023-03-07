@@ -28,15 +28,15 @@ public class UsuarioRepositoryTest {
 		
 		usuarioRepository.deleteAll(null);
 		
-		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 		
-		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 		
-		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 		
-		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 		
-		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+		usuarioRepository.save(new UsuarioModel(0L,"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 	}
 	
 	@Test

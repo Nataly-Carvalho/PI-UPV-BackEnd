@@ -39,14 +39,14 @@ public class UsuarioControllerTest {
 		usuarioRepository.deleteAll();
 		
 		usuarioService.cadastrarUsuario(new UsuarioModel(0L, 
-				"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+				"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","12345678910", "asd","12","12","12345678", "aaa","ssss", "aaaa" ));
 	}
 	
 	@Test
 	@DisplayName("Cadastrar Um Usuario")
 	public void deveCriarUmUsuario() {
 		
-		HttpEntity<UsuarioModel> corpoRequisicao = new HttpEntity<UsuarioModel>(new UsuarioModel(0L, "Root1","root1", "root1@root.com", "rootroot1", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+		HttpEntity<UsuarioModel> corpoRequisicao = new HttpEntity<UsuarioModel>(new UsuarioModel(0L, "Root1","root1", "root1@root.com", "rootroot1", " ", "", "12345678900","123456789", "asd","12","12","12345678" ,"aaa","ssss", "aaaa"));
 		ResponseEntity<UsuarioModel> corpoResposta = testRestTemplate
 			.exchange("/usuarios/cadastrar", HttpMethod.POST, corpoRequisicao, UsuarioModel.class);
 		
@@ -61,10 +61,10 @@ public class UsuarioControllerTest {
 	public void naoDeveDuplicarUsuario() {
 		
 		usuarioService.cadastrarUsuario(new UsuarioModel (0L,
-				"Root2","root2", "root2@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+				"Root2","root2", "root2@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 		
 		HttpEntity<UsuarioModel> corpoRequisicao = new HttpEntity<UsuarioModel>(new UsuarioModel (0L,
-				"Root3","root3", "root3@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+				"Root3","root3", "root3@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 		
 		ResponseEntity<UsuarioModel> corpoResposta =  testRestTemplate
 				.exchange("/usuarios/cadastrar",HttpMethod.POST, corpoRequisicao, UsuarioModel.class);
@@ -78,10 +78,10 @@ public class UsuarioControllerTest {
 	public void deveAtualizarUmUsuario() {
 		
 		Optional<UsuarioModel> usuarioCadastrado = usuarioService.cadastrarUsuario(new UsuarioModel(0L,
-				"Root4","root5", "root4@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+				"Root4","root5", "root4@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 		
 		UsuarioModel usuarioUpdate = new UsuarioModel(usuarioCadastrado.get().getId(),
-				"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678");
+				"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa");
 		
 		
 		HttpEntity<UsuarioModel> corpoRequisicao = new HttpEntity<UsuarioModel>(usuarioUpdate);
@@ -98,10 +98,10 @@ public class UsuarioControllerTest {
 	@DisplayName("Listar todos os usuarios")
 	public void deveMostrarTodosUsuarios() {
 		usuarioService.cadastrarUsuario(new UsuarioModel(0L, 
-				"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+				"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 		
 		usuarioService.cadastrarUsuario(new UsuarioModel(0L, 
-				"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678"));
+				"Root","root", "root@root.com", "rootroot", " ", "", "12345678900","123456789", "asd","12","12","12345678","aaa","ssss", "aaaa"));
 		
 		ResponseEntity<String> resposta = testRestTemplate
 				.withBasicAuth("root@root.com", "rootroot")
