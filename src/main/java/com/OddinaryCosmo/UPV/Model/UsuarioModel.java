@@ -44,13 +44,14 @@ public class UsuarioModel {
 		@Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres")
 		private String foto;
 		
+		@NotBlank(message = "O atributo cep é Obrigatorio")
 		private String tipo;
 		
 		@Size(min = 11, max= 11, message = "O CPF tem que ter no minimo 9 digitos e no maximo 9" )
 		@NotBlank(message = "O atributo cpf é Obrigatorio")
 		private String cpf;
 		
-		@Size(min = 9,max = 9, message = "O número tem que ter no maximo 11 caracteres e e no minimo 11")
+		@Size(min = 11,max = 11, message = "O número tem que ter no maximo 11 caracteres e e no minimo 11")
 		private String telefone;
 		
 		@NotBlank(message = "O atributo bairro é Obrigatorio")
@@ -68,9 +69,18 @@ public class UsuarioModel {
 		
 		private String complemento;
 		
-
+		@NotBlank(message = "O atributo cep é Obrigatorio")
+		private String pais;
+		
+		@NotBlank(message = "O atributo cep é Obrigatorio")
+		private String estado;
+		
+		@NotBlank(message = "O atributo cep é Obrigatorio")
+		private String cidade;
+		
+		@NotBlank(message = "O atributo cep é Obrigatorio")
 		public UsuarioModel(Long id, String nome, String usuario,String senha,String foto,String tipo, String cep,String cpf, String rua,String telefone,
-				String numero, String complemento,String sobrenome ) {
+				String numero, String complemento,String sobrenome, String cidade, String estado, String pais ) {
 			this.id = id;
 			this.nome = nome;
 			this.usuario = usuario;
@@ -84,6 +94,9 @@ public class UsuarioModel {
 			this.rua = rua;
 			this.cpf = cpf;
 			this.sobrenome = sobrenome;
+			this.cidade = cidade;
+			this.estado = estado;
+			this.pais = pais;
 			
 		}
 		
@@ -215,6 +228,31 @@ public class UsuarioModel {
 		public void setProdutos(List<ProdutosModel> produtos) {
 			this.produtos = produtos;
 		}
+
+		public String getPais() {
+			return pais;
+		}
+
+		public void setPais(String pais) {
+			this.pais = pais;
+		}
+
+		public String getEstado() {
+			return estado;
+		}
+
+		public void setEstado(String estado) {
+			this.estado = estado;
+		}
+
+		public String getCidade() {
+			return cidade;
+		}
+
+		public void setCidade(String cidade) {
+			this.cidade = cidade;
+		}
+		
 
 		
 		
