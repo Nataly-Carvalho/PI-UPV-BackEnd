@@ -19,6 +19,7 @@ public class UsuarioLogin {
 	private String cidade;
 	private String pais;
 	private String estado;
+	private String numero;
 	
 	
 	
@@ -124,6 +125,12 @@ public class UsuarioLogin {
 	}
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = numero;
 	}
 	
 

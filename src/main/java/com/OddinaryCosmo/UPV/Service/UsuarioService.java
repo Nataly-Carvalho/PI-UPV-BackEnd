@@ -62,6 +62,17 @@ public class UsuarioService {
 			usuarioLogin.get().setToken(gerarBasicToken(usuarioLogin.get().getUsuario(),usuarioLogin.get().getSenha()));
 			usuarioLogin.get().setSenha(usuario.get().getSenha());
 			usuarioLogin.get().setTipo(usuario.get().getTipo());
+			usuarioLogin.get().setBairro(usuario.get().getBairro());
+			usuarioLogin.get().setCep(usuario.get().getCep());
+			usuarioLogin.get().setCidade(usuario.get().getCidade());
+			usuarioLogin.get().setComplemento(usuario.get().getComplemento());
+			usuarioLogin.get().setCpf(usuario.get().getCpf());
+			usuarioLogin.get().setEstado(usuario.get().getEstado());
+			usuarioLogin.get().setRua(usuario.get().getRua());
+			usuarioLogin.get().setSobrenome(usuario.get().getSobrenome());
+			usuarioLogin.get().setTelefone(usuario.get().getTelefone());
+			usuarioLogin.get().setPais(usuario.get().getPais());
+			usuarioLogin.get().setNumero(usuario.get().getNumero());
 			
 			return usuarioLogin;
 			

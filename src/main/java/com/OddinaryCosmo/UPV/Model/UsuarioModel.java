@@ -78,7 +78,7 @@ public class UsuarioModel {
 		@NotBlank(message = "O atributo cep é Obrigatorio")
 		private String cidade;
 		
-		@NotBlank(message = "O atributo cep é Obrigatorio")
+		
 		public UsuarioModel(Long id, String nome, String usuario,String senha,String foto,String tipo, String cep,String cpf, String rua,String telefone,
 				String numero, String complemento,String sobrenome, String cidade, String estado, String pais ) {
 			this.id = id;
