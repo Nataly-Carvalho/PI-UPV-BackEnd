@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -25,8 +26,7 @@ public class UsuarioModel {
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
-		
-		@NotNull(message = "O atrib(0L, \"Root\",\"root\", \"root@root.com\", \"rootroot\", \" \", \"\", \"12345678900\",\"123456789\", \"asd\",\"12\",\"12\",\"12345678\"));uto Nome é Obrigatorio")
+		@NotNull(message = "O atributo Nome é Obrigatorio")
 		private String nome;
 		
 		@NotNull(message = "O atributo sobrenome é Obrigatorio")
@@ -44,10 +44,10 @@ public class UsuarioModel {
 		@Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres")
 		private String foto;
 		
-		@NotBlank(message = "O atributo cep é Obrigatorio")
+		@NotBlank(message = "O atributo tipo é Obrigatorio")
 		private String tipo;
 		
-		@Size(min = 11, max= 11, message = "O CPF tem que ter no minimo 9 digitos e no maximo 9" )
+		@Size(min = 11, max= 11, message = "O CPF tem que ter no minimo 11 digitos e no maximo 11" )
 		@NotBlank(message = "O atributo cpf é Obrigatorio")
 		private String cpf;
 		
@@ -78,7 +78,6 @@ public class UsuarioModel {
 		@NotBlank(message = "O atributo cep é Obrigatorio")
 		private String cidade;
 		
-		
 		public UsuarioModel(Long id, String nome, String usuario,String senha,String foto,String tipo, String cep,String cpf, String rua,String telefone,
 				String numero, String complemento,String sobrenome, String cidade, String estado, String pais ) {
 			this.id = id;
@@ -104,8 +103,18 @@ public class UsuarioModel {
 		@JsonIgnoreProperties("usuario")
 		private List<ProdutosModel> produtos;
 		
+		@OneToOne
+		private CarrinhoModel carrinho;
 		
 		
+		public CarrinhoModel getCarrinho() {
+			return carrinho;
+		}
+
+		public void setCarrinho(CarrinhoModel carrinho) {
+			this.carrinho = carrinho;
+		}
+
 		public String getSobrenome() {
 			return sobrenome;
 		}
@@ -252,7 +261,6 @@ public class UsuarioModel {
 		public void setCidade(String cidade) {
 			this.cidade = cidade;
 		}
-		
 
 		
 		

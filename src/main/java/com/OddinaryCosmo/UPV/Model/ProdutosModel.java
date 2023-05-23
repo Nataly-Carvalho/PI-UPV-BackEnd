@@ -1,6 +1,5 @@
 package com.OddinaryCosmo.UPV.Model;
 
-import java.math.BigDecimal;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,7 +25,7 @@ public class ProdutosModel {
 	private String nome;
 
 	@NotNull
-	private BigDecimal preco;
+	private Double preco;
 
 	private String descricao;
 
@@ -58,11 +57,11 @@ public class ProdutosModel {
 		this.nome = nome;
 	}
 
-	public BigDecimal getPreco() {
+	public Double getPreco() {
 		return preco;
 	}
 
-	public void setPreco(BigDecimal preco) {
+	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
 
